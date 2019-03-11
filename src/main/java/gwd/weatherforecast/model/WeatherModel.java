@@ -1,9 +1,10 @@
-package gwd.weatherforecast;
+package gwd.weatherforecast.model;
 
 public class WeatherModel {
 
 
     private WeatherDetails main;
+
 
     public WeatherDetails getMain() {
         return main;
@@ -13,11 +14,15 @@ public class WeatherModel {
         this.main = main;
     }
 
-    public static class WeatherDetails{
+    public static class WeatherDetails {
         private double temp;
 
         public double getTemp() {
             return temp;
+        }
+
+        public double getTempinCelsium() {
+            return (temp -273.15);
         }
 
         public void setTemp(double temp) {
